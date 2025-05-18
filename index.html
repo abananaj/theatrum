@@ -1,107 +1,95 @@
-<!doctype html>
-<html lang="en">
-    <head>
-        <title>Title</title>
-        <!-- Required meta tags -->
-        <meta charset="utf-8" />
-        <meta
-            name="viewport"
-            content="width=device-width, initial-scale=1, shrink-to-fit=no"
-        />
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>THEATRUM HOME</title>
+  <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css'>
+<link rel='stylesheet' href='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css'>
+<link rel='stylesheet' href='https://codepen.io/annabananajennings/pen/OPJxMPx.css'><link rel="stylesheet" href="./style.css">
 
-        <!-- Bootstrap CSS v5.2.1 -->
-        <link
-            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-            rel="stylesheet"
-            integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-            crossorigin="anonymous"
-        />
-    </head>
-wp core dowload
-    <body>
-        <header>
-<nav
-    class="navbar navbar-expand-md navbar-light bg-light"
->
-    <div class="container">
-        <a class="navbar-brand" href="#">Theatrum Mundi</a>
-        <button
-            class="navbar-toggler d-lg-none"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#collapsibleNavId"
-            aria-controls="collapsibleNavId"
-            aria-expanded="false"
-            aria-label="Toggle navigation"
-        >
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="collapsibleNavId">
-            <ul class="navbar-nav me-auto mt-2 mt-lg-0">
-                <li class="nav-item">
-                    <a class="nav-link active" href="#" aria-current="page"
-                        >Home
-                        <span class="visually-hidden">(current)</span></a
-                    >
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Link</a>
-                </li>
-                <li class="nav-item dropdown">
-                    <a
-                        class="nav-link dropdown-toggle"
-                        href="#"
-                        id="dropdownId"
-                        data-bs-toggle="dropdown"
-                        aria-haspopup="true"
-                        aria-expanded="false"
-                        >Dropdown</a
-                    >
-                    <div
-                        class="dropdown-menu"
-                        aria-labelledby="dropdownId"
-                    >
-                        <a class="dropdown-item" href="#"
-                            >Action 1</a
-                        >
-                        <a class="dropdown-item" href="#"
-                            >Action 2</a
-                        >
-                    </div>
-                </li>
-            </ul>
-            <form class="d-flex my-2 my-lg-0">
-                <input
-                    class="form-control me-sm-2"
-                    type="text"
-                    placeholder="Search"
-                />
-                <button
-                    class="btn btn-outline-success my-2 my-sm-0"
-                    type="submit"
-                >
-                    Search
-                </button>
-            </form>
-        </div>
-    </div>
-</nav>
-        </header>
-        <main></main>
-        <footer>
-            <!-- place footer here -->
-        </footer>
-        <!-- Bootstrap JavaScript Libraries -->
-        <script
-            src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-            integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-            crossorigin="anonymous"
-        ></script>
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<button class="navToggle">
+	<svg aria-hidden="true" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="none">
+		<rect width="18" height="1.5" fill=red ry="0.75" x="3" y="6.25" />
+		<rect width="18" height="1.5" fill=red ry="0.75" x="3" y="11.25" />
+		<rect width="18" height="1.5" fill=red ry="0.75" x="3" y="16.25" />
+	</svg>
+</button>
+<div id="navbar">
+	<nav>
+		<ul>
+			<li>
+				<span></span>
+				<a href="#home">home</a>
+			</li>
+			<li>
+				<span></span>
+				<a href="#about">about</a>
+			</li>
+			<li>
+				<span></span>
+				<a href="#portfolio">projects</a>
+			</li>
+			<li>
+				<span></span>
+				<a href="#services">services</a>
+			</li>
+			<li class="contact">
+				<span></span>
+				<a href="#contact">contact</a>
+				<ul>
+					<li>Instagram</li>
+					<li>Instagram</li>
+					<li>Instagram</li>
+				</ul>
+			</li>
+			<!-- 			<li>
+				<span></span>
+				<a href="#capability">capability statement</a>
+			</li> -->
+		</ul>
+	</nav>
+	<img src="https://assets.codepen.io/8875557/globe2.png" alt="" />
+	<div id="bg"></div>
+</div>
+<div class="page">
+	<div class="intro">
+		<div class="panel"></div>
+	</div>
 
-        <script
-            src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
-            integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
-            crossorigin="anonymous"
-        ></script>
-    </body>
+	<div class="scrollContainer">
+		<section class="full">
+			<div class='title-container' data-scroll data-scroll-speed="2">
+				<h1>Theatrum Mundi</h1>
+			</div>
+			<div class="hero-container">
+				<video src="https://repositorium.theatrum.design/videos/stage-lights-fog.mp4" loop muted autoplay playsinline></video>
+			</div>
+		</section>
+		<section class="full sec-p pinQuote">
+			<blockquote>"All the world’s a stage,
+				And all the men and women merely players."<br>
+				<cite class="tk-input-mono-condensed">As You Like It, II.vii</cite>
+			</blockquote>
+		</section>
+		<section class="sec-img">
+			<div class="img-container">
+				<div class="mask"></div>
+				<div class="img">
+					<a href="#about">about</a>
+				</div>
+			</div>
+		</section>
+	</div>
+</div>
+<!-- partial -->
+  <script src='https://unpkg.com/gsap@3/dist/gsap.min.js'></script>
+<script src='https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js'></script>
+<script src='https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js'></script>
+<script src='https://assets.codepen.io/16327/SplitText3.min.js'></script>
+<script src='https://codepen.io/annabananajennings/pen/OPJxMPx.js'></script><script  src="./script.js"></script>
+
+</body>
 </html>
