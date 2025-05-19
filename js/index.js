@@ -1,17 +1,13 @@
-// import { gsap } from "gsap";
+import { gsap } from "gsap";
 
-// import { GSDevTools } from "gsap/GSDevTools";
-// import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import { SplitText } from "gsap/SplitText";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SplitText } from "gsap/SplitText";
 
-// import LocomotiveScroll from 'locomotive-scroll';
+import LocomotiveScroll from 'locomotive-scroll';
 
-// const locomotiveScroll = new LocomotiveScroll();
+const locomotiveScroll = new LocomotiveScroll();
 
 gsap.registerPlugin(GSDevTools, MorphSVGPlugin, ScrollTrigger, SplitText);
-
-gsap.registerPlugin(SplitText, ScrollTrigger);
 
 window.addEventListener("load", () => gsap.set("body", { autoAlpha: 1 }));
 

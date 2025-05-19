@@ -1,15 +1,16 @@
-#page {
-  height: 300vh;
+@import url("https://use.typekit.net/qxm4hdp.css");
+@import url("/node_modules/locomotive-scroll/dist/locomotive-scroll.css");
+body {
+  background-color: black;
+  color: white;
+  font-family: "bc-sklonar", sans-serif;
 }
 
-body > .navToggle {
+.navToggle {
   visibility: hidden;
 }
 
-#navbar {
-  --height: 300px;
-  --width: 300px;
-  --space: 10px;
+.navbar {
   z-index: 100;
   visibility: hidden;
   height: 300px;
@@ -19,7 +20,7 @@ body > .navToggle {
   transform-origin: bottom left;
   width: 300px;
 }
-#navbar nav ul {
+.navbar nav ul {
   padding: 0;
   margin: 0;
   position: absolute;
@@ -30,97 +31,83 @@ body > .navToggle {
   gap: 0;
   z-index: 9;
 }
-#navbar nav ul li {
+.navbar nav ul li {
   display: flex;
   align-items: center;
   cursor: pointer;
 }
-#navbar nav ul li span {
+.navbar nav ul li span {
   width: 10px;
   height: 10px;
   border-radius: 0;
-  margin: 0 var(--space) calc(var(--space) * 0.5) var(--space);
   background-color: gray;
   transition: 500ms ease-in-out;
 }
-#navbar nav ul li a {
-  font-family: "obviously-variable", sans-serif;
-  font-variation-settings: "wght" 600, "wdth" 100, "ital" 0;
+.navbar nav ul li a {
   font-size: 30px;
   text-decoration: none;
   color: gray;
   transition: 500ms ease-in-out;
   white-space: nowrap;
 }
-#navbar nav ul li:hover a {
+.navbar nav ul li:hover a {
   color: yellow;
-  font-variation-settings: "wght" 300, "wdth" 150, "ital" 0;
   transition: 500ms ease-in-out;
 }
-#navbar nav ul li ~ :hover span {
+.navbar nav ul li ~ :hover span {
   color: yellow;
-  width: 30px;
-  height: 30px;
   transition: 500ms ease-in-out;
 }
-#navbar img {
+.navbar img {
   height: var(--height);
   z-index: 10;
 }
 
-#bg {
+.bg {
   width: 100vw;
-  height: calc(var(--height) * 0.25);
+  height: 75px;
   position: absolute;
   bottom: 0;
   left: 0;
   background-color: rgba(0, 0, 0, 0.9);
-  background-filter: blur(5px);
   z-index: -1;
 }
 
 @media screen and (max-width: 767px) {
-  #page {
+  .page {
     height: 300vh;
   }
-
-  #navbar {
-    --height: 100px;
-    --width: 100px;
-    --space: 10px;
+  .navbar {
     z-index: 100;
     visibility: hidden;
-    height: var(--height);
+    height: 100px;
     position: fixed;
     bottom: 0;
     left: 0;
     transform-origin: bottom left;
-    width: var(--width);
-    text-align: right;
+    width: 100px;
   }
-  #navbar nav ul {
-    display: flex;
-    flex-flow: column nowrap;
+  .navbar nav ul {
     right: 0;
     bottom: 0;
     gap: 0;
     z-index: 9;
   }
-  #navbar nav ul li {
-    text-align: right;
+  .navbar nav ul li {
+    text-align: left;
     display: flex;
     align-items: center;
     cursor: pointer;
   }
-  #navbar nav ul li span {
+  .navbar nav ul li span {
     width: 10px;
     height: 10px;
     border-radius: 0;
-    margin: 0 var(--space) calc(var(--space) * 0.5) var(--space);
+    margin: 0 10px 5px 10px;
     background-color: gray;
     transition: 500ms ease-in-out;
   }
-  #navbar nav ul li a {
+  .navbar nav ul li a {
     text-align: right;
     font-variation-settings: "wght" 300, "wdth" 50, "ital" 0;
     font-size: 30px;
@@ -129,23 +116,22 @@ body > .navToggle {
     transition: 500ms ease-in-out;
     white-space: nowrap;
   }
-  #navbar nav ul li:hover a {
+  .navbar nav ul li:hover a {
     color: yellow;
     font-variation-settings: "wght" 300, "wdth" 150, "ital" 0;
     transition: 500ms ease-in-out;
   }
-  #navbar nav ul li ~ :hover span {
+  .navbar nav ul li ~ :hover span {
     color: yellow;
     width: 30px;
     height: 30px;
     transition: 500ms ease-in-out;
   }
-  #navbar img {
+  .navbar img {
     height: var(--height);
     z-index: 10;
   }
-
-  #bg {
+  .bg {
     width: 100vw;
     height: calc(var(--height) * 0.25);
     position: absolute;
@@ -161,11 +147,8 @@ section {
   height: 100vh;
   width: 100%;
   display: grid;
-  font-family: ltc-pabst-oldstyle, serif;
   font-weight: 100;
   place-items: center;
-  background-color: black;
-  color: white;
 }
 
 .intro {
@@ -176,13 +159,14 @@ section {
   height: 100vh;
   width: 100%;
   pointer-events: none;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 .intro .panel {
   position: absolute;
   top: 0;
   left: 0;
-  height: 100%;
   width: 100%;
   transform-origin: bottom;
   background-color: white;
@@ -209,13 +193,15 @@ section {
 
 h1,
 h2 {
-  font-family: "schmaltzy", serif;
+  font-family: "p-22-elizabethan", serif;
   font-size: 10vw;
   font-weight: 400;
   transition: 500ms ease-out;
   text-align: center;
   letter-spacing: 0px;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 h1:hover {
@@ -224,22 +210,27 @@ h1:hover {
 }
 
 blockquote {
-  max-width: clamp(500px, 90%, 72 0px);
+  max-width: clamp(500px, 90%, 720px);
   margin: 0 auto;
   line-height: 1.1;
   font-size: clamp(20px, 4.4vw, 50px);
   text-align: center;
-  user-select: none;
-  font-family: ltc-pabst-oldstyle, serif;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  font-family: "bc-slonaker", serif;
   font-weight: 100;
 }
+
 .img h2 {
   z-index: 999;
   position: absolute;
   font-size: 7vw;
   text-align: center;
   color: #c93849;
-  user-select: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
   mix-blend-mode: screen;
 }
 
@@ -258,7 +249,6 @@ blockquote {
   right: 0;
   height: 100%;
   width: 100%;
-  background-color: black;
   transform-origin: bottom;
 }
 .img-container .img {
@@ -340,4 +330,4 @@ a {
   text-align: right;
   padding: 1vw 2vw;
   border-radius: 0 calc(var(--btt-width) / 30) calc(var(--btt-width) / 30) 0;
-}
+}/*# sourceMappingURL=index.css.map */

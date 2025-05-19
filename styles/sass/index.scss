@@ -1,24 +1,33 @@
+@import url("https://use.typekit.net/qxm4hdp.css");
+
+
+$bc-sklonar: "bc-sklonar",sans-serif;
+$sirenne-six-mvb: "sirenne-six-mvb",serif;
+$sirenne-six-mvb-roman-small: "sirenne-six-mvb-roman-small",serif;
+$p22-elizabethan: "p22-elizabethan",sans-serif;
+
+
+@import url("/node_modules/locomotive-scroll/dist/locomotive-scroll.css");
+	$height: 300px;
+	$width: 300px;
+	$space: 10px;
 
 body {
-    background-color: #333;
+  background-color: black;
+  color: white;
+    font-family: $bc-sklonar;
 }
-.gsap-marker-end, 
-.gsap-marker-start, 
-.gsap-marker-scroller-end, 
-.gsap-marker-scroller-start {
-    display:none;
-}
+
+@import url(_navbar.scss);
+
 
 section {
   position: relative;
   height: 100vh;
   width: 100%;
   display: grid;
-  font-family: ltc-pabst-oldstyle, serif;
   font-weight: 100;
   place-items: center;
-  background-color: black;
-  color: white;
 }
  
 .intro {
@@ -64,7 +73,7 @@ section {
 
 h1,
 h2 {
-  font-family: "schmaltzy", serif;
+  font-family: "p-22-elizabethan", serif;
   font-size: 10vw;
   font-weight: 400;
   transition: 500ms ease-out;
@@ -113,7 +122,7 @@ blockquote {
     right: 0;
     height: 100%;
     width: 100%;
-    background-color: black;
+    // background-color: black;
     transform-origin: bottom;
   }
 
