@@ -15,10 +15,10 @@ $p22-elizabethan: "p22-elizabethan",sans-serif;
 body {
   background-color: black;
   color: white;
-    font-family: $bc-sklonar;
+    font-family: $bc-sklonar;//
 }
 
-@import url(_navbar.scss);
+// @import url(_navbar.scss);
 
 
 section {
@@ -92,7 +92,7 @@ blockquote {
   font-size: clamp(20px, 4.4vw, 50px);
   text-align: center;
   user-select: none;
-  font-family: "bc-slonaker", serif;
+  font-family: "bc-sklonar", serif;
   font-weight: 100;
 }
 

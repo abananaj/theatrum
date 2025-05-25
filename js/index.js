@@ -7,7 +7,7 @@ import LocomotiveScroll from 'locomotive-scroll';
 
 const locomotiveScroll = new LocomotiveScroll();
 
-gsap.registerPlugin(GSDevTools, MorphSVGPlugin, ScrollTrigger, SplitText);
+gsap.registerPlugin(ScrollTrigger, SplitText);
 
 window.addEventListener("load", () => gsap.set("body", { autoAlpha: 1 }));
 
