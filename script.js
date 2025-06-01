@@ -1,16 +1,3 @@
-import { gsap } from "gsap";
-    
-import { GSDevTools } from "gsap/GSDevTools";
-import { MorphSVGPlugin } from "gsap/MorphSVGPlugin";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import { SplitText } from "gsap/SplitText";
-
-import LocomotiveScroll from 'locomotive-scroll';
-
-const locomotiveScroll = new LocomotiveScroll();
-
-gsap.registerPlugin(GSDevTools,MorphSVGPlugin,ScrollTrigger,SplitText);
-
 gsap.registerPlugin(SplitText, ScrollTrigger);
 
 window.addEventListener("load", () => gsap.set("body", { autoAlpha: 1 }));
@@ -120,20 +107,3 @@ gsap.from("p", {
 	duration: 1,
 	ease: "power3.out"
 });
-
-//PINNING
-
-gsap.to(".pinQuote", {
-	yPercent: -100,
-	ease: "none",
-	stagger: 0.5,
-	scrollTrigger: {
-		trigger: "#container",
-		start: "top top",
-		end: "+=300%",
-		scrub: true,
-		pin: true
-	}
-});
-
-gsap.set(".pinQuote", { zIndex: (i, target, targets) => targets.length - i });
